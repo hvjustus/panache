@@ -1,5 +1,6 @@
-*{
+* {
     font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
 }
 
 :root {
@@ -7,18 +8,62 @@
     --panache-grey: #1a1a1a;
     --panache-white: #f7f7fd;
     --panache-purple: #7200ff;
-    --panache-purple-transparent: rgba(114, 0, 255, 0.5);
+    --panache-purple-transparent: rgba(114, 0, 255, 0.25);
 }
 
-::selection {
-    background-color: var(--panache-purple);
-    color: white;
+html, body { overflow-x: hidden; }
+
+::selection { background-color: var(--panache-purple); color: white; }
+
+section { position: relative; overflow: hidden; }
+
+.text-pnc { color: var(--panache-purple); }
+
+.bg-pnc { background: var(--panache-purple); }
+.bg-darker { background-color: #1a1a1a !important; }
+
+.pnc-outline-sm { border: 2px solid var(--panache-purple); }
+.pnc-outline { border: 3px solid var(--panache-purple); }
+.pnc-outline-lg { border: 4px solid var(--panache-purple); }
+
+.vh-25 { height: 25vh; }
+.vh-50 { height: 50vh; }
+.vh-75 { height: 75vh; }
+
+.icon-sm { height: 0.875em; width: auto; }
+.icon { height: 1.25em; width: auto; }
+.icon-lg { height: 1.75em; width: auto; }
+
+.blur-bg { position: relative; overflow: hidden; }
+
+.scroll-animate {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+.scroll-animate.animate__animated {
+    opacity: 1;
+}
+
+.blur-bg::before {
+    content: '';
+    position: absolute;
+    top: -1%;
+    left: -1%;
+    right: -1%;
+    bottom: -1%;
+    background: inherit;
+    filter: blur(1rem);
+    z-index: -1;
 }
 
 .pnc-step-circle {
     width: 100%;
-    max-width: 120px;
+    max-width: 150px;
     aspect-ratio: 1;
+    overflow: hidden;
 }
 
 .cover-pnc {
@@ -26,21 +71,14 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
-.text-pnc{ color: var(--panache-purple); }
-
-.bg-pnc{ background: var(--panache-purple); }
-.bg-darker{ background-color: #1a1a1a !important; }
-
-.pnc-outline-sm{ border: 2px solid var(--panache-purple); }
-.pnc-outline{ border: 3px solid var(--panache-purple); }
-.pnc-outline-lg{ border: 4px solid var(--panache-purple); }
-
-.vh-25 { height: 25vh; }
-.vh-50 { height: 50vh; }
-.vh-75 { height: 75vh; }
-
-.icon-sm { height: 0.875em; width: auto; }
-.icon{ height: 1.25em; width: auto; }
-.icon-lg { height: 1.75em; width: auto; }
+.glass-card {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: relative;
+    mask-image: linear-gradient(to bottom, black 80%, transparent 150%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    overflow: hidden;
+}
