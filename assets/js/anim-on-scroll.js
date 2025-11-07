@@ -1,26 +1,40 @@
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+class ScrollAnimator {
+    constructor(options = {}) {
+        this.options = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px',
+            ...options
+        };
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const element = entry.target;
-            const animation = element.dataset.animation;
-            const delay = element.dataset.delay;
+        this.observer = new IntersectionObserver(this.handleIntersect.bind(this), this.options);
+        this.targets = document.querySelectorAll('.scroll-animate');
+        this.init();
+    }
 
-            if (delay) {
-                element.style.animationDelay = delay + 's';
+    init() {
+        this.targets.forEach(el => {
+            if (el.dataset.animation) {
+                this.observer.observe(el);
             }
+        });
+    }
 
-            element.classList.add('animate__animated', animation);
-                    observer.unobserve(element);
-        }
-    });
-}, observerOptions);
+    handleIntersect(entries) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+
+            const el = entry.target;
+            const animation = el.dataset.animation;
+            const delay = parseFloat(el.dataset.delay) || 0;
+
+            el.style.animationDelay = `${delay}s`;
+            el.classList.add('animate__animated', animation);
+
+            this.observer.unobserve(el);
+        });
+    }
+}
 
 document.addEventListener('DOMContentLoaded', () => {
-    const scrollElements = document.querySelectorAll('.scroll-animate');
-    scrollElements.forEach(el => observer.observe(el));
+    new ScrollAnimator();
 });

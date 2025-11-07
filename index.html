@@ -5,266 +5,290 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/anim-on-scroll.js" async></script>
-
-    <!-- hover.css -->
-    <link rel="stylesheet" href="./assets/css/hover-min.css" media="all">
-
-    <!-- animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
-    <!-- bootstrap -->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz4YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"
         defer></script>
 
-    <!-- font awesome -->
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
-    <!-- google fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
+    <!-- Hover.css -->
+    <link rel="stylesheet" href="./assets/css/hover-min.css" media="all">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/anim-on-scroll.js" defer></script>
+    <script src="./assets/js/current-year.js" defer></script>
+
+    <link rel="shortcut icon" href="./assets/img/pnc-icon-purple.png" type="image/png">
+
     <title>Panache</title>
 </head>
 
-<body class="bg-darker">
+<body>
     <header
-        class="container-fluid d-flex glass-card justify-content-evenly align-items-center fixed-top px-2 px-md-4 py-1 py-md-2 animate__animated animate__fadeInDown">
-        <a href="" class=""><img src="./assets/img/pnc-icon-purple.png" class="fa-solid fa-2xl hvr-grow"></a>
-        <nav class="d-none d-sm-flex">
-            <a href="" class="text-pnc text-decoration-none mx-2 mx-md-3 p-1 hvr-sink">Option1</a>
-            <a href="" class="text-pnc text-decoration-none mx-2 mx-md-3 p-1 hvr-sink">Option2</a>
-            <a href="" class="text-pnc text-decoration-none mx-2 mx-md-3 p-1 hvr-sink">Option3</a>
+        class="align-items-center container-fluid d-flex fixed-top glass-card justify-content-evenly position-fixed px-3 px-md-4 py-0 start-0 top-0 w-100 z-3">
+
+        <a href="#hero" class="hvr-grow">
+            <img src="./assets/img/pnc-icon-purple.png" alt="Panache Icon" class="pnc-logo-sm">
+        </a>
+
+        <nav class="d-none d-sm-flex gap-2 gap-md-3">
+            <a href="#services" class="hvr-sink p-1 text-decoration-none text-pnc">Serviços</a>
+            <a href="#operation" class="hvr-sink p-1 text-decoration-none text-pnc">Como Funciona</a>
+            <a href="#faq" class="hvr-sink p-1 text-decoration-none text-pnc">FAQ</a>
         </nav>
-        <a href="#contact" class="text-pnc text-decoration-none p-1 hvr-icon-forward">Seja Panache <i
-                class="fa-solid fa-arrow-right hvr-icon"></i></a>
+
+        <a href="#contact" class="hvr-icon-forward p-1 text-decoration-none text-pnc">
+            Seja Panache <i class="fa-solid fa-arrow-right hvr-icon"></i>
+        </a>
     </header>
 
-    <section id="hero" class="container-fluid d-flex align-items-center vh-100 text-light cover-pnc">
+    <!-- hero -->
+    <section id="hero" class="align-items-center bg-grey container-fluid d-flex pnc-cover text-light vh-100">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <img src="./assets/img/pnc-logo-purple.png" alt="Logo da Panache"
-                        class="img-fluid mb-4 hvr-grow animate__animated animate__zoomIn" style="max-width: 300px;">
-                    <h1 class="display-4 fw-bold mb-4 animate__animated animate__fadeInUp animate__delay-1">Redefinindo
-                        o conceito de marketing no <span class="text-pnc hvr-skew-forward">litoral catarinense.</span>
+                    <span class="hvr-grow">
+                        <img src="./assets/img/pnc-logo-purple.png" alt="Logo da Panache"
+                            class="animate__animated animate__zoomIn hvr-grow w img-fluid mb-4 pnc-logo-xl">
+                    </span>
+                    <h1 class="animate__animated animate__fadeInUp display-4 fw-bold mb-4">
+                        Redefinindo o conceito de marketing no
+                        <span class="hvr-float text-pnc">litoral catarinense.</span>
                     </h1>
-                    <h2 class="lead mb-4 animate__animated animate__fadeInUp animate__delay-2">Frase de efeito 2</h2>
+                    <h2 class="animate__animated animate__fadeInUp lead mb-4">
+                        Frase de efeito 2
+                    </h2>
                     <a href="#contact"
-                        class="text-pnc pnc-outline rounded-pill text-decoration-none p-2 px-3 hvr-icon-forward hvr-grow animate__animated animate__fadeInUp animate__delay-3">Seja
-                        Panache <i class="fa-solid fa-arrow-right hvr-icon"></i></a>
+                        class="animate__animated animate__fadeInUp hvr-icon-forward p-2 pnc-outline px-3 rounded-pill text-decoration-none text-pnc">
+                        Seja Panache <i class="fa-solid fa-arrow-right hvr-icon"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="container-fluid pb-5 text-light">
+    <!-- servicos -->
+    <section id="services" class="bg-grey container-fluid py-5 text-light">
         <div class="container">
-            <h2 class="display-4 fw-bold text-center mt-5 mb-3 scroll-animate" data-animation="animate__fadeIn">
+            <h2 class="display-4 fw-bold mb-5 scroll-animate text-center" data-animation="animate__fadeIn">
                 Nossos <span class="text-pnc">Serviços</span>
             </h2>
-            <div class="row justify-content-center mt-2 g-4">
-                <div class="col-12 col-md-6 col-lg-4 hvr-float">
-                    <div class="scroll-animate bg-black rounded-4 p-4 h-100 text-center"
+            <div class="g-4 justify-content-center row">
+                <div class="col-12 col-lg-4 col-md-6 hvr-grow">
+                    <div class="bg-black h-100 hvr-float p-4 rounded-4 scroll-animate text-center"
                         data-animation="animate__fadeInUp">
-                        <i class="fa-solid fa-chart-line fa-3x text-pnc my-3"></i>
-                        <h4 class="mb-2">Deselvolvimento Web</h4>
-                        <p class="mb-0">Criamos uma landing page completa para sua empresa.</p>
+                        <i class="fa-3x fa-solid fa-chart-line my-3 text-pnc"></i>
+                        <h3 class="h4 mb-3">Marketing Digital</h3>
+                        <p class="mb-0">Estratégias completas para impulsionar sua presença online.</p>
                     </div>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-4 hvr-float">
-                    <div class="scroll-animate bg-black rounded-4 p-4 h-100 text-center"
+                <div class="col-12 col-lg-4 col-md-6 hvr-grow">
+                    <div class="bg-black h-100 hvr-float p-4 rounded-4 scroll-animate text-center"
                         data-animation="animate__fadeInUp">
-                        <i class="fa-solid fa-code fa-3x text-pnc my-3"></i>
-                        <h4 class="mb-2">Deselvolvimento Web</h4>
-                        <p class="mb-0">Criamos uma landing page completa para sua empresa.</p>
+                        <i class="fa-3x fa-code fa-solid my-3 text-pnc"></i>
+                        <h3 class="h4 mb-3">Desenvolvimento Web</h3>
+                        <p class="mb-0">Criamos landing pages completas para sua empresa.</p>
                     </div>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-4 hvr-float">
-                    <div class="scroll-animate bg-black rounded-4 p-4 h-100 text-center"
+                <div class="col-12 col-lg-4 col-md-6 hvr-grow">
+                    <div class="bg-black h-100 hvr-float p-4 rounded-4 scroll-animate text-center"
                         data-animation="animate__fadeInUp">
-                        <i class="fa-solid fa-bullseye fa-3x text-pnc my-3"></i>
-                        <h4 class="mb-2">Deselvolvimento Web</h4>
-                        <p class="mb-0">Criamos uma landing page completa para sua empresa.</p>
+                        <i class="fa-3x fa-bullseye fa-solid my-3 text-pnc"></i>
+                        <h3 class="h4 mb-3">Gestão de Redes</h3>
+                        <p class="mb-0">Gerenciamos suas redes sociais com conteúdo estratégico.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="container text-center my-5">
-        <hr class="w-50 mx-auto border-2 pnc-outline animate__animated animate__fadeInUp">
+    <div class="bg-grey container-fluid d-flex justify-content-center py-5">
+        <hr class="animate__animated animate__fadeInUp border-2 pnc-outline w-50">
     </div>
 
-    <section id="operation" class="container-fluid py-5 text-light">
+    <!-- como funciona -->
+    <section id="operation" class="bg-grey container-fluid py-5 text-light">
         <div class="container-lg">
-            <h2 class="display-4 fw-bold text-center mb-5 scroll-animate" data-animation="animate__fadeIn">
+            <h2 class="display-4 fw-bold mb-5 scroll-animate text-center" data-animation="animate__fadeIn">
                 Como <span class="text-pnc">Funciona</span>
             </h2>
-            <div class="row g-4 text-center">
+            <div class="g-4 row text-center">
                 <div class="col-6 col-md-3 scroll-animate" data-animation="animate__fadeInUp">
                     <div
-                        class="align-items-center d-flex justify-content-center pnc-outline-sm pnc-step-circle mb-3 rounded-circle mx-auto p-4 hvr-float">
+                        class="align-items-center d-flex hvr-float justify-content-center mb-3 mx-auto p-4 pnc-outline-sm pnc-step-circle rounded-circle">
                         <span class="display-4 fw-bold text-pnc">1</span>
                     </div>
-                    <h3 class="fw-bold h5">Diagnóstico</h3>
-                    <p>Analisamos sua presença digital atual</p>
+                    <h3 class="fw-bold h5 mb-2">Diagnóstico</h3>
+                    <p class="mb-0">Analisamos sua presença digital atual</p>
                 </div>
-                <div class="col-6 col-md-3 scroll-animate" data-animation="animate__fadeInUp" data-delay="0.1">
+                <div class="col-6 col-md-3 scroll-animate" data-animation="animate__fadeInUp">
                     <div
-                        class="align-items-center d-flex justify-content-center pnc-outline-sm pnc-step-circle mb-3 rounded-circle mx-auto p-4 hvr-float">
+                        class="align-items-center d-flex hvr-float justify-content-center mb-3 mx-auto p-4 pnc-outline-sm pnc-step-circle rounded-circle">
                         <span class="display-4 fw-bold text-pnc">2</span>
                     </div>
-                    <h3 class="fw-bold h5">Estratégia</h3>
-                    <p>Criamos um plano personalizado</p>
+                    <h3 class="fw-bold h5 mb-2">Estratégia</h3>
+                    <p class="mb-0">Criamos um plano personalizado</p>
                 </div>
-                <div class="col-6 col-md-3 scroll-animate" data-animation="animate__fadeInUp" data-delay="0.2">
+                <div class="col-6 col-md-3 scroll-animate" data-animation="animate__fadeInUp">
                     <div
-                        class="align-items-center d-flex justify-content-center pnc-outline-sm pnc-step-circle mb-3 rounded-circle mx-auto p-4 hvr-float">
+                        class="align-items-center d-flex hvr-float justify-content-center mb-3 mx-auto p-4 pnc-outline-sm pnc-step-circle rounded-circle">
                         <span class="display-4 fw-bold text-pnc">3</span>
                     </div>
-                    <h3 class="fw-bold h5">Execução</h3>
-                    <p>Implementamos e gerenciamos</p>
+                    <h3 class="fw-bold h5 mb-2">Execução</h3>
+                    <p class="mb-0">Implementamos e gerenciamos</p>
                 </div>
-                <div class="col-6 col-md-3 scroll-animate" data-animation="animate__fadeInUp" data-delay="0.3">
+                <div class="col-6 col-md-3 scroll-animate" data-animation="animate__fadeInUp">
                     <div
-                        class="align-items-center d-flex justify-content-center pnc-outline-sm pnc-step-circle mb-3 rounded-circle mx-auto p-4 hvr-float">
+                        class="align-items-center d-flex hvr-float justify-content-center mb-3 mx-auto p-4 pnc-outline-sm pnc-step-circle rounded-circle">
                         <span class="display-4 fw-bold text-pnc">4</span>
                     </div>
-                    <h3 class="fw-bold h5">Resultados</h3>
-                    <p>Monitoramos e otimizamos</p>
+                    <h3 class="fw-bold h5 mb-2">Resultados</h3>
+                    <p class="mb-0">Monitoramos e otimizamos</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="faq" class="container-fluid pb-5 text-light">
+    <!-- faq -->
+    <section id="faq" class="bg-grey container-fluid py-5 text-light">
         <div class="container">
-            <div class="row justify-content-center mt-2 g-4">
-                <div class="col-12 col-md-6 col-lg-4 hvr-float">
-                    <div class="scroll-animate bg-black rounded-4 p-4 h-100 d-flex align-items-start"
+            <h2 class="display-4 fw-bold mb-5 scroll-animate text-center" data-animation="animate__fadeIn">
+                Perguntas <span class="text-pnc">Frequentes</span>
+            </h2>
+            <div class="g-4 justify-content-center row">
+                <div class="col-12 col-lg-4 col-md-6 hvr-grow">
+                    <article class="align-items-start bg-black d-flex h-100 p-4 rounded-4 scroll-animate"
                         data-animation="animate__fadeInUp">
-                        <i class="fa-solid fa-circle-user fa-3x text-pnc me-3"></i>
+                        <i class="fa-3x fa-circle-user fa-solid me-3 text-pnc"></i>
                         <div>
-                            <h5 class="mb-2">Cliente 1</h5>
-                            <p class="fw-bold mb-1">Q: Quanto tempo demoram para entregar resultados?</p>
-                            <p class="mb-0">R: Em torno de X-X semanas.</p>
+                            <h3 class="h5 mb-3">Cliente 1</h3>
+                            <p class="fw-bold mb-2">Q: Quanto tempo demoram para entregar resultados?</p>
+                            <p class="mb-0">R: Em torno de 2-4 semanas.</p>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-4 hvr-float">
-                    <div class="scroll-animate bg-black rounded-4 p-4 h-100 d-flex align-items-start"
+                <div class="col-12 col-lg-4 col-md-6 hvr-grow">
+                    <article class="align-items-start bg-black d-flex h-100 p-4 rounded-4 scroll-animate"
                         data-animation="animate__fadeInUp">
-                        <i class="fa-solid fa-circle-user fa-3x text-pnc me-3"></i>
+                        <i class="fa-3x fa-circle-user fa-solid me-3 text-pnc"></i>
                         <div>
-                            <h5 class="mb-2">Cliente 2</h5>
-                            <p class="fw-bold mb-1">Q: Quanto tempo demoram para entregar resultados?</p>
-                            <p class="mb-0">R: Em torno de X-X semanas.</p>
+                            <h3 class="h5 mb-3">Cliente 2</h3>
+                            <p class="fw-bold mb-2">Q: Trabalham com quais tipos de empresas?</p>
+                            <p class="mb-0">R: Atendemos empresas de todos os portes e segmentos.</p>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-4 hvr-float">
-                    <div class="scroll-animate bg-black rounded-4 p-4 h-100 d-flex align-items-start"
+                <div class="col-12 col-lg-4 col-md-6 hvr-grow">
+                    <article class="align-items-start bg-black d-flex h-100 p-4 rounded-4 scroll-animate"
                         data-animation="animate__fadeInUp">
-                        <i class="fa-solid fa-circle-user fa-3x text-pnc me-3"></i>
+                        <i class="fa-3x fa-circle-user fa-solid me-3 text-pnc"></i>
                         <div>
-                            <h5 class="mb-2">Cliente 3</h5>
-                            <p class="fw-bold mb-1">Q: Quanto tempo demoram para entregar resultados?</p>
-                            <p class="mb-0">R: Em torno de X-X semanas.</p>
+                            <h3 class="h5 mb-3">Cliente 3</h3>
+                            <p class="fw-bold mb-2">Q: Como funciona o acompanhamento?</p>
+                            <p class="mb-0">R: Relatórios mensais e suporte contínuo.</p>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="container-fluid cover-pnc min-vh-100 text-light">
-        <div class="row justify-content-center align-items-center py-5">
-            <div class="col-12 col-lg-10 col-xl-8 text-center">
-                <h1 class="display-4 fw-bold mb-4 px-3 scroll-animate" data-animation="animate__fadeIn">
-                    Vamos conversar sobre o <span class="text-pnc">seu próximo projeto?</span>
-                </h1>
-                <h2 class="lead mb-5 px-3 scroll-animate" data-animation="animate__fadeIn" data-delay="0.1">
-                    Entre em contato com nossa equipa para [...]
-                </h2>
+    <!-- contato -->
+    <section id="contact" class="align-items-center bg-grey container-fluid d-flex min-vh-100 pnc-cover text-light">
+        <div class="container py-5">
+            <div class="align-items-center justify-content-center row">
+                <div class="col-12 col-lg-10 col-xl-8 text-center">
+                    <h2 class="display-4 fw-bold mb-4 px-3 scroll-animate" data-animation="animate__fadeIn">
+                        Vamos conversar sobre o <span class="text-pnc">seu próximo projeto?</span>
+                    </h2>
+                    <p class="fs-5 mb-5 px-3 scroll-animate" data-animation="animate__fadeIn">
+                        Entre em contato com nossa equipe para começar sua transformação digital
+                    </p>
 
-                <a href="https://wa.me/5547997010428?text=Quero%20fazer%20minha%20marca%20crescer%20com%20a%20Panache!"
-                    target="_blank" rel="noopener noreferrer"
-                    class="pnc-outline rounded-pill text-light text-decoration-none d-inline-flex align-items-center hvr-icon-buzz-out mb-5 px-4 py-3 hvr-grow scroll-animate"
-                    data-animation="animate__pulse" data-delay="0.2" aria-label="Fale conosco no WhatsApp">
-                    <i class="fa-brands fa-whatsapp hvr-icon fa-2x me-2" aria-hidden="true"></i>
-                    <span class="fs-5 fs-md-4"><span class="d-none d-md-inline">Fale Conosco no </span>WhatsApp</span>
-                </a>
+                    <a href="https://wa.me/5547997010428?text=Quero%20fazer%20minha%20marca%20crescer%20com%20a%20Panache!"
+                        target="_blank" rel="noopener noreferrer"
+                        class="align-items-center d-inline-flex hvr-grow hvr-icon-buzz-out mb-5 pnc-outline px-4 py-3 rounded-pill scroll-animate text-decoration-none text-light"
+                        data-animation="animate__pulse" aria-label="Fale conosco no WhatsApp">
+                        <i class="fa-2x fa-brands fa-whatsapp hvr-icon me-2" aria-hidden="true"></i>
+                        <span class="fs-5"><span class="d-none d-md-inline">Fale Conosco no </span>WhatsApp</span>
+                    </a>
 
-                <nav class="d-flex justify-content-center gap-3 gap-md-4 scroll-animate"
-                    data-animation="animate__fadeInUp" data-delay="0.3">
-                    <a href="https://instagram.com/" class="text-pnc transition-opacity" aria-label="Instagram"><i
-                            class="fab fa-instagram fa-2x hvr-grow-shadow"></i></a>
-                    <a href="https://tiktok.com/" class="text-pnc transition-opacity" aria-label="TikTok"><i
-                            class="fab fa-tiktok fa-2x hvr-grow-shadow"></i></a>
-                    <a href="https://youtube.com/" class="text-pnc transition-opacity" aria-label="YouTube"><i
-                            class="fab fa-youtube fa-2x hvr-grow-shadow"></i></a>
-                </nav>
-            </div>
-
-            <div class="container-fluid row mt-5 pt-4 justify-content-center g-4">
-                <div class="col-12 col-md-6 col-lg-4 text-center scroll-animate" data-animation="animate__fadeInUp">
-                    <div class="p-4">
-                        <i class="fa-solid fa-rocket fa-3x text-pnc mb-3 hvr-grow"></i>
-                        <h4 class="mb-3">Resultados Rápidos</h4>
-                        <p>Estratégias eficientes que trazem resultados em tempo recorde</p>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4 text-center scroll-animate" data-animation="animate__fadeInUp"
-                    data-delay="0.1">
-                    <div class="p-4">
-                        <i class="fa-solid fa-users fa-3x text-pnc mb-3 hvr-grow"></i>
-                        <h4 class="mb-3">Time Especializado</h4>
-                        <p>Profissionais experientes focados no sucesso do seu negócio</p>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4 text-center scroll-animate" data-animation="animate__fadeInUp"
-                    data-delay="0.2">
-                    <div class="p-4">
-                        <i class="fa-solid fa-chart-line fa-3x text-pnc mb-3 hvr-grow"></i>
-                        <h4 class="mb-3">Crescimento Real</h4>
-                        <p>Aumento comprovado em engajamento e conversões</p>
-                    </div>
+                    <nav class="d-flex gap-3 gap-md-4 justify-content-center mb-5 scroll-animate"
+                        data-animation="animate__fadeInUp">
+                        <a href="https://instagram.com/" class="text-pnc" aria-label="Instagram">
+                            <i class="fa-2x fab fa-instagram hvr-grow-shadow"></i>
+                        </a>
+                        <a href="https://tiktok.com/" class="text-pnc" aria-label="TikTok">
+                            <i class="fa-2x fab fa-tiktok hvr-grow-shadow"></i>
+                        </a>
+                        <a href="https://youtube.com/" class="text-pnc" aria-label="YouTube">
+                            <i class="fa-2x fab fa-youtube hvr-grow-shadow"></i>
+                        </a>
+                    </nav>
                 </div>
             </div>
-    </section>
 
-    <footer class="container-fluid py-4 text-light animate__animated animate__fadeInUp">
-        <div class="container-lg d-flex flex-column flex-md-row justify-content-between align-items-center">
-            <div class="mb-3 mb-md-0">
-                <a href="#hero" class="d-inline-block animate__animated animate__fadeInLeft animate__delay-1s">
-                    <img src="./assets/img/pnc-icon-purple.png" class="hvr-grow" style="height: 40px;"
-                        alt="Panache Logo">
-                </a>
-            </div>
+            <div class="g-4 justify-content-center mt-5 row">
+                <div class="col-12 col-lg-4 col-md-6 text-center">
+                    <article class="p-4 scroll-animate" data-animation="animate__fadeInUp">
+                        <i class="fa-3x fa-rocket fa-solid hvr-grow mb-3 text-pnc"></i>
+                        <h3 class="h4 mb-3">Resultados Rápidos</h3>
+                        <p class="mb-0">Estratégias eficientes que trazem resultados em tempo recorde</p>
+                    </article>
+                </div>
 
-            <div class="text-center small text-pnc animate__animated animate__fadeInUp animate__delay-2s">
-                &copy; <span id="year"></span> Panache — Todos os direitos reservados.
-            </div>
+                <div class="col-12 col-lg-4 col-md-6 text-center">
+                    <article class="p-4 scroll-animate" data-animation="animate__fadeInUp">
+                        <i class="fa-3x fa-solid fa-users hvr-grow mb-3 text-pnc"></i>
+                        <h3 class="h4 mb-3">Time Especializado</h3>
+                        <p class="mb-0">Profissionais experientes focados no sucesso do seu negócio</p>
+                    </article>
+                </div>
 
-            <div class="animate__animated animate__fadeInRight animate__delay-1s">
-                <a href="#contact" class="text-pnc text-decoration-none me-3 hvr-underline-from-left">Option1</a>
-                <a href="#privacy" class="text-pnc text-decoration-none hvr-underline-from-left">Política de
-                    Privacidade</a>
+                <div class="col-12 col-lg-4 col-md-6 text-center">
+                    <article class="p-4 scroll-animate" data-animation="animate__fadeInUp">
+                        <i class="fa-3x fa-chart-line fa-solid hvr-grow mb-3 text-pnc"></i>
+                        <h3 class="h4 mb-3">Crescimento Real</h3>
+                        <p class="mb-0">Aumento comprovado em engajamento e conversões</p>
+                    </article>
+                </div>
             </div>
         </div>
+    </section>
+
+    <footer
+        class="align-items-center animate__animated animate__fadeInUp bg-grey d-flex flex-column flex-md-row justify-content-between p-4 text-light">
+        <div class="mb-3 mb-md-0">
+            <a href="#hero" class="d-inline-block">
+                <img src="./assets/img/pnc-icon-purple.png" class="hvr-grow pnc-logo-sm" alt="Panache Logo">
+            </a>
+        </div>
+
+        <div class="small text-center text-pnc">
+            &copy; <span id="year"></span> Panache — Todos os direitos reservados.
+        </div>
+
+        <nav>
+            <a href="#contact" class="hvr-grow me-3 text-decoration-none text-pnc">Contato</a>
+            <a href="#privacy" class="hvr-grow text-decoration-none text-pnc">Política de Privacidade</a>
+        </nav>
     </footer>
 </body>
 
