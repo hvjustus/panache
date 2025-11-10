@@ -25,7 +25,7 @@
         rel="stylesheet">
 
     <!-- Hover.css -->
-    <link rel="stylesheet" href="./assets/css/hover-min.css" media="all">
+    <link rel="stylesheet" href="./assets/css/hover.min.css" media="all">
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/anim-on-scroll.js" defer></script>
@@ -56,7 +56,7 @@
     </header>
 
     <!-- hero -->
-    <section id="hero" class="align-items-center bg-grey container-fluid d-flex pnc-cover text-light vh-100">
+    <section id="hero" class="align-items-center container-fluid d-flex pnc-cover text-light vh-100">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
@@ -108,16 +108,78 @@
                 <div class="col-12 col-lg-4 col-md-6 hvr-grow">
                     <div class="bg-black h-100 hvr-float p-4 rounded-4 scroll-animate text-center"
                         data-animation="animate__fadeInUp">
-                        <i class="fa-3x fa-bullseye fa-solid my-3 text-pnc"></i>
-                        <h3 class="h4 mb-3">Gestão de Redes</h3>
-                        <p class="mb-0">Gerenciamos suas redes sociais com conteúdo estratégico.</p>
+                        <i class="fa-3x fa-robot fa-solid my-3 text-pnc"></i>
+                        <h3 class="h4 mb-3">Automação de Leads</h3>
+                        <p class="mb-0">Lorem ipsum texto placeholder nao sei escrever isso</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="bg-grey container-fluid d-flex justify-content-center py-5">
+    <!-- grafico -->
+    <section id="graph" class="bg-grey container-fluid d-flex justify-content-center pb-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6 scroll-animate animate__animated animate__fadeInUp">
+                    <figure>
+                        <svg viewBox="0 0 500 250" class="w-100" preserveAspectRatio="none" role="img"
+                            aria-labelledby="chartTitle">
+                            <title id="chartTitle">Panache vs Outras Marcas</title>
+                            <defs>
+                                <linearGradient id="pncGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="var(--panache-purple)" stop-opacity="0.25" />
+                                    <stop offset="100%" stop-color="var(--panache-purple)" stop-opacity="0" />
+                                </linearGradient>
+                                <linearGradient id="otherGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="var(--panache-white)" stop-opacity="0.15" />
+                                    <stop offset="100%" stop-color="var(--panache-white)" stop-opacity="0" />
+                                </linearGradient>
+                            </defs>
+
+                            <path
+                                d="M0,230 L62,215 L125,200 L187,195 L250,190 L312,185 L375,180 L437,178 L500,176 L500,250 L0,250Z"
+                                fill="url(#otherGradient)" class="chart-area"></path>
+                            <path d="M0,230 L62,215 L125,200 L187,195 L250,190 L312,185 L375,180 L437,178 L500,176"
+                                stroke="var(--panache-white)" stroke-opacity="0.7" class="chart-line"
+                                stroke-dasharray="4 4"></path>
+                            <path
+                                d="M0,220 L62,200 L125,170 L187,160 L250,130 L312,120 L375,115 L437,90 L500,80 L500,250 L0,250Z"
+                                fill="url(#pncGradient)" class="chart-area"></path>
+                            <path d="M0,220 L62,200 L125,170 L187,160 L250,130 L312,120 L375,115 L437,90 L500,80"
+                                stroke="var(--panache-purple)" class="chart-line"></path>
+                        </svg>
+
+                        <figcaption class="mt-3 d-flex flex-wrap gap-3 text-secondary small">
+                            <div class="d-flex align-items-center gap-2 hvr-grow">
+                                <span class="legend-dot bg-pnc"></span>
+                                <span class="text-pnc fw-semibold">Panache</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 hvr-grow text-white-50">
+                                <span class="legend-dot bg-white opacity-70"></span>
+                                <span>Outras Marcas</span>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div
+                    class="col-12 col-lg-6 text-start scroll-animate animate__animated animate__fadeInUp">
+                    <h2 class="fw-bold mb-3 text-light">a <span class="text-pnc">Panache </span>cresce mais rápido.</h2>
+                    <p class="mb-4 text-secondary fs-5">
+                        Enquanto outras marcas seguem o mercado, a Panache define o ritmo com estratégias que geram
+                        resultados reais e mensuráveis.
+                    </p>
+                    <a href="#contact"
+                        class="animate__animated animate__fadeInUp hvr-icon-forward p-2 pnc-outline px-3 rounded-pill text-decoration-none text-pnc">
+                        Seja Panache <i class="fa-solid fa-arrow-right hvr-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-grey container-fluid d-flex justify-content-center py-3 py-md-5">
         <hr class="animate__animated animate__fadeInUp border-2 pnc-outline w-50">
     </div>
 
