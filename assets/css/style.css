@@ -120,6 +120,93 @@ section {
     opacity: 1;
 }
 
+.anim-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: transform;
+}
+
+.anim-grow:hover,
+.anim-grow:focus,
+.anim-grow:active {
+    transform: scale(1.10) translateZ(0);
+}
+
+.anim-sink {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+}
+
+.anim-sink:hover,
+.anim-sink:focus,
+.anim-sink:active {
+    transform: translateY(4px) translateZ(0);
+}
+
+.anim-float {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    will-change: transform, box-shadow;
+}
+
+.anim-float:hover,
+.anim-float:focus,
+.anim-float:active {
+    transform: translateY(-6px) translateZ(0);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.anim-icon {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+}
+
+.anim-icon-forward:hover .anim-icon,
+.anim-icon-forward:focus .anim-icon,
+.anim-icon-forward:active .anim-icon {
+    transform: translateX(4px) translateZ(0);
+}
+
+@keyframes anim-buzz {
+
+    0%,
+    100% {
+        transform: translateX(0) translateZ(0);
+    }
+
+    10%,
+    30%,
+    50% {
+        transform: translateX(-3px) translateZ(0);
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: translateX(3px) translateZ(0);
+    }
+
+    70% {
+        transform: translateX(0) translateZ(0);
+    }
+}
+
+.anim-icon-buzz:hover .anim-icon,
+.anim-icon-buzz:focus .anim-icon,
+.anim-icon-buzz:active .anim-icon {
+    animation: anim-buzz 1s ease-in-out infinite;
+}
+
 .icon-lg {
     height: 1.75em;
     width: auto;
